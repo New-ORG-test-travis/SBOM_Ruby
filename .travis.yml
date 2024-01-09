@@ -8,8 +8,8 @@ jobs:                             # existing functionality
          on:
 #             branch: main
 #             condition: $OS = linux
-#           run_phase: before_script
+#           run_phase: after_success
 #           output_format: cyclonedx-xml
 #         mariadb: '10.0'
 #       script:
-#         - python hello_world.py
+#         - gem build ./ruby/hello_world.gemspec
