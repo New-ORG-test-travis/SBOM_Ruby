@@ -1,15 +1,11 @@
-jobs:                             # existing functionality
-  include:                        # existing functionality
+---
+jobs:
+  include:
     - os: linux
       dist: focal
-      name: "SBOM generation example job"
-      addons:
-         sbom                    # new node
-         on:
-#             branch: main
-#             condition: $OS = linux
-#           run_phase: after_success
-#           output_format: cyclonedx-xml
-#         mariadb: '10.0'
-#       script:
-#         - gem build ./ruby/hello_world.gemspec
+      name: Linux Focal Ruby
+      addons: sbom
+on:
+  output_format: cyclonedx-json
+  input_dir: /sbom/ruby
+  output_dir: /sbom/ruby
