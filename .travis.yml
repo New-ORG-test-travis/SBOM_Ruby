@@ -3,7 +3,6 @@ jobs:
     - os: linux
       dist: focal
       name: SBOM Ruby
-      os: linux
       language: ruby
       script:
         - gem build ./sbom/ruby/hello_world.gemspec
