@@ -1,11 +1,17 @@
----
 jobs:
   include:
     - os: linux
       dist: focal
-      name: Linux Focal Ruby
-      addons: sbom
-on:
-  output_format: cyclonedx-json
-  input_dir: /sbom/ruby
-  output_dir: /sbom/ruby
+      name: SBOM Ruby
+      os: linux
+      language: ruby
+      script:
+        - gem build ./sbom/ruby/hello_world.gemspec
+      addons:
+        sbom:
+          on:
+            branch: 'main'
+          run_phase: 'after_success'
+          output_format: 'cyclonedx-json'
+          input_dir: '/sbom/ruby'
+          output_dir: '/sbom/ruby'
