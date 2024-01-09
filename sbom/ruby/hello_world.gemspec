@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.summary	= "an example of a project that can be deployed"
   s.description	= "Make something that can run in production"
-  s.author	= "Ankit"
+  s.author	= "Pankaj86999646"
   s.email	= "github@example.com"
   s.homepage	= "http://github.com"
   s.files	=  Dir['README.md', 'VERSION', 'Gemfile', 'Rakefile', '{bin,lib,config,vendor}/**/*']
