@@ -1,0 +1,15 @@
+jobs:                             # existing functionality
+  include:                        # existing functionality
+    - os: linux
+      dist: focal
+      name: "SBOM generation example job"
+      addons:
+         sbom                    # new node
+         on:
+#             branch: main
+#             condition: $OS = linux
+#           run_phase: before_script
+#           output_format: cyclonedx-xml
+#         mariadb: '10.0'
+#       script:
+#         - python hello_world.py
